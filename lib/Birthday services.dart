@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled4/Bash sahypa.dart';
 
 
 
@@ -28,14 +27,14 @@ class _BirthdayState extends State<Birthday> {
                       children: [
                         suratUcin(150,(MediaQuery.of(context).size.width/2),1),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Birhday venue"),
+                        asakyText(20,150,"Birhday party"),
                       ],
                     ),
                   ),
                   Column(children: [
                     suratUcin(150,(MediaQuery.of(context).size.width/2-20),2),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Birhday venue"),
+                    asakyText(20,150,"Birhday party"),
                   ],),
                 ],
               ),
@@ -54,7 +53,7 @@ class _BirthdayState extends State<Birthday> {
                   Column(children: [
                     suratUcin(150,(MediaQuery.of(context).size.width/2-20),6),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Birhday car"),
+                    asakyText(20,150,"Car decoration"),
                   ],),
                 ],
               ),
@@ -66,14 +65,14 @@ class _BirthdayState extends State<Birthday> {
                       children: [
                         suratUcin(150,(MediaQuery.of(context).size.width/2),7),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Decorations"),
+                        asakyText(20,150,"Birthday cake"),
                       ],
                     ),
                   ),
                   Column(children: [
                     suratUcin(150,(MediaQuery.of(context).size.width/2-20),8),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Decorations"),
+                    asakyText(20,150,"Birtday cake"),
                   ],),
                 ],
               ),
@@ -85,14 +84,14 @@ class _BirthdayState extends State<Birthday> {
                       children: [
                         suratUcin(150,(MediaQuery.of(context).size.width/2),3),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Wedding dresses"),
+                        asakyText(20,150,"Decorations"),
                       ],
                     ),
                   ),
                   Column(children: [
                     suratUcin(150,(MediaQuery.of(context).size.width/2-20),9),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Wedding dresses"),
+                    asakyText(20,150,"Services"),
                   ],),
                 ],
               ),
@@ -119,13 +118,18 @@ class _BirthdayState extends State<Birthday> {
     );
   }
 
-  Container suratUcin(double h,double w,int i) {
-    return Container(
-      height: h,
-      width: w,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('lib/assets/birthday$i.webp'),fit: BoxFit.cover,
+  InkWell suratUcin(double h,double w,int i) {
+    return InkWell(
+      onTap: (){
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(child:Image.asset('lib/assets/birthday$i.webp'),)));
+      },
+      child: Container(
+        height: h,
+        width: w,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('lib/assets/birthday$i.webp'),fit: BoxFit.cover,
+          ),
         ),
       ),
     );
