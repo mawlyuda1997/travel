@@ -27,14 +27,14 @@ class _BirthdayPageState extends State<BirthdayPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),1),
                         SizedBox(height: 10,),
-                        createText(20,150,"Birhday party"),
+                        createText(20,150,1),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),2),
                     SizedBox(height: 10,),
-                    createText(20,150,"Birhday party"),
+                    createText(20,150,2),
                   ],),
                 ],
               ),
@@ -46,14 +46,14 @@ class _BirthdayPageState extends State<BirthdayPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),5),
                         SizedBox(height: 10,),
-                        createText(20,150,"Birhday car"),
+                        createText(20,150,3),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),6),
                     SizedBox(height: 10,),
-                    createText(20,150,"Car decoration"),
+                    createText(20,150,4),
                   ],),
                 ],
               ),
@@ -65,14 +65,14 @@ class _BirthdayPageState extends State<BirthdayPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),7),
                         SizedBox(height: 10,),
-                        createText(20,150,"Birthday cake"),
+                        createText(20,150,5),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),8),
                     SizedBox(height: 10,),
-                    createText(20,150,"Birtday cake"),
+                    createText(20,150,6),
                   ],),
                 ],
               ),
@@ -84,14 +84,14 @@ class _BirthdayPageState extends State<BirthdayPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),3),
                         SizedBox(height: 10,),
-                        createText(20,150,"Decorations"),
+                        createText(20,150,7),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),9),
                     SizedBox(height: 10,),
-                    createText(20,150,"Services"),
+                    createText(20,150,8),
                   ],),
                 ],
               ),
@@ -103,7 +103,7 @@ class _BirthdayPageState extends State<BirthdayPage> {
     );
   }
 
-  Container createText(double h,double w,String s) {
+  Container createText(double h,double w,int i) {
     return Container(height: h,
       width: w,
       decoration: BoxDecoration(
@@ -111,13 +111,12 @@ class _BirthdayPageState extends State<BirthdayPage> {
         color: Colors.green,
       ),
       child: Center(
-        child: Text(s,style: TextStyle(
-          fontFamily: "Monserrat",fontSize: 14,color: Colors.white,
-        ),),
-      ),
-    );
-  }
+        child: i%2==0? Text("${i*400}tmt",style: TextStyle(fontFamily: "Monserrat",fontSize: 14,color: Colors.white,),):Text("${i*500}tmt",style: TextStyle(fontFamily: "Monserrat",fontSize: 14,color: Colors.white,),)
+           ),
+      );
 
+  }
+  //style: TextStyle(fontFamily: "Monserrat",fontSize: 14,color: Colors.white,),
   InkWell createImage(double h,double w,int i) {
     return InkWell(
       onTap: (){

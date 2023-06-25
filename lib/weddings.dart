@@ -29,14 +29,14 @@ class _WeddingPageState extends State<WeddingPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),3),
                         SizedBox(height: 10,),
-                        createText(20,150,"Wedding venue"),
+                        createText(20,150,1),
                       ],
                     ),
                   ),
                Column(children: [
                  createImage(150,(MediaQuery.of(context).size.width/2-20),1),
                  SizedBox(height: 10,),
-                 createText(20,150,"Wedding venue"),
+                 createText(20,150,2),
                ],),
                 ],
               ),
@@ -48,14 +48,14 @@ class _WeddingPageState extends State<WeddingPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),2),
                         SizedBox(height: 10,),
-                        createText(20,150,"Wedding car"),
+                        createText(20,150,3),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),4),
                     SizedBox(height: 10,),
-                    createText(20,150,"Wedding car"),
+                    createText(20,150,4),
                   ],),
                 ],
               ),
@@ -67,14 +67,14 @@ class _WeddingPageState extends State<WeddingPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),5),
                         SizedBox(height: 10,),
-                        createText(20,150,"Salon Services"),
+                        createText(20,150,5),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),6),
                     SizedBox(height: 10,),
-                    createText(20,150,"Salon Services"),
+                    createText(20,150,6),
                   ],),
                 ],
               ),
@@ -86,14 +86,14 @@ class _WeddingPageState extends State<WeddingPage> {
                       children: [
                         createImage(150,(MediaQuery.of(context).size.width/2),7),
                         SizedBox(height: 10,),
-                        createText(20,150,"Wedding dresses"),
+                        createText(20,150,7),
                       ],
                     ),
                   ),
                   Column(children: [
                     createImage(150,(MediaQuery.of(context).size.width/2-20),8),
                     SizedBox(height: 10,),
-                    createText(20,150,"Wedding dresses"),
+                    createText(20,150,8),
                   ],),
                 ],
               ),
@@ -126,7 +126,7 @@ class _WeddingPageState extends State<WeddingPage> {
 
 
 
-  Container createText(double h,double w,String s) {
+  Container createText(double h,double w,int i) {
     return Container(height: h,
                         width: w,
                         decoration: BoxDecoration(
@@ -134,9 +134,7 @@ class _WeddingPageState extends State<WeddingPage> {
                           color: Colors.brown,
                         ),
                         child: Center(
-                          child: Text(s,style: TextStyle(
-                            fontFamily: "Monserrat",fontSize: 14,color: Colors.white,
-                          ),),
+                            child: i%2==0? Text("${i*200}tmt",style: TextStyle(fontFamily: "Monserrat",fontSize: 14,color: Colors.white,),):Text("${i*300}tmt",style: TextStyle(fontFamily: "Monserrat",fontSize: 14,color: Colors.white,),)
                         ),
                       );
   }
