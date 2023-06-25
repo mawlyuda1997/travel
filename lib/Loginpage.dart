@@ -3,14 +3,14 @@ import 'package:untitled4/for_lite_dark_theme.dart';
 import 'package:untitled4/for_lite_dark_theme.dart';
 import 'package:untitled4/for_hive.dart';
 
-class Logins extends StatefulWidget {
-  const Logins({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State<Logins> createState() => _LoginsState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginsState extends State<Logins> {
+class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {

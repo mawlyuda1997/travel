@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:untitled4/Bash sahypa.dart';
-import 'package:untitled4/Birthday%20services.dart';
-import 'package:untitled4/loginpage.dart';
+import 'package:untitled4/MainPage.dart';
+
+import 'package:untitled4/Loginpage.dart';
 import 'package:untitled4/weddings.dart';
 import 'package:untitled4/decorations.dart';
+
+import 'BirtdayServices.dart';
 
 class Pages extends StatefulWidget {
   const Pages({Key? key}) : super(key: key);
@@ -18,10 +20,10 @@ class _PagesState extends State<Pages> {
   int _index = 0;
   final List pages =[
     MyWidget(),
-    Wedding(),
-    Birthday(),
-    Decor(),
-    Logins(),
+    WeddingPage(),
+    BirthdayPage(),
+    DecorPage(),
+    LoginPage(),
 
   ];
   Widget build(BuildContext context) {
@@ -60,7 +62,7 @@ class _PagesState extends State<Pages> {
                  children: [
                    FloatingActionButton(onPressed: (){Navigator.of(context).pop();},child: Text("Yza"),),
                    SizedBox(width: 8,),
-                   FloatingActionButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Logins()));},child: Text("Geç"),),
+                   FloatingActionButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>LoginPage()));},child: Text("Geç"),),
                  ],
                ),
 

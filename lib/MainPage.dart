@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:untitled4/Surata girish.dart';
+import 'package:untitled4/ForImageHero.dart';
 import 'package:untitled4/for_hive.dart';
 
 
@@ -61,13 +61,13 @@ class _MyWidgetState extends State<MyWidget> {
                 padding: EdgeInsets.all(10),
                 scrollDirection: Axis.horizontal,
                 children: [
-                  listElementi("lib/assets/balloons.jpg","lib/assets/balloons.jpg"),
+                  buildListElement("lib/assets/balloons.jpg","lib/assets/balloons.jpg"),
                   SizedBox(width: 20,),
-                  listElementi("lib/assets/surpriz2.png","lib/assets/balloons.jpg"),
+                  buildListElement("lib/assets/surpriz2.png","lib/assets/balloons.jpg"),
                   SizedBox(width: 20,),
-                  listElementi("lib/assets/surpriz3.jpg","lib/assets/balloons.jpg"),
+                  buildListElement("lib/assets/surpriz3.jpg","lib/assets/balloons.jpg"),
                   SizedBox(width: 20,),
-                  listElementi("lib/assets/surpriz1.jpg","lib/assets/balloons.jpg"),
+                  buildListElement("lib/assets/surpriz1.jpg","lib/assets/balloons.jpg"),
                 ],
               ),
             ),
@@ -185,7 +185,7 @@ class _MyWidgetState extends State<MyWidget> {
   InkWell buildInkWell(int i,double h,double w) {
     return InkWell(
                           onTap: (){
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Details(imgPath:"lib/assets/surpriz$i.webp")));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath:"lib/assets/surpriz$i.webp")));
                           },
                           child: Hero(
                             tag: "lib/assets/surpriz$i.webp",
@@ -212,7 +212,7 @@ class _MyWidgetState extends State<MyWidget> {
 
 
 
-  listElementi(String image, String image1) {
+  buildListElement(String image, String image1) {
     return Column(
       children: [
         Stack(

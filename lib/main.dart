@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled4/pages.dart';
-import 'package:untitled4/Bash sahypa.dart';
-import 'package:untitled4/weddings.dart';
 
-import 'Girish.dart';
+
+import 'InputPage.dart';
 void main() {
   runApp(
       MaterialApp(

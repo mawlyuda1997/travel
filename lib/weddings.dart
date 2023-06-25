@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 
 
-class Wedding extends StatefulWidget {
-  const Wedding({Key? key}) : super(key: key);
+class WeddingPage extends StatefulWidget {
+  const WeddingPage({Key? key}) : super(key: key);
 
   @override
-  State<Wedding> createState() => _WeddingState();
+  State<WeddingPage> createState() => _WeddingPageState();
 }
 
-class _WeddingState extends State<Wedding> {
+class _WeddingPageState extends State<WeddingPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +27,16 @@ class _WeddingState extends State<Wedding> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),3),
+                        createImage(150,(MediaQuery.of(context).size.width/2),3),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Wedding venue"),
+                        createText(20,150,"Wedding venue"),
                       ],
                     ),
                   ),
                Column(children: [
-                 suratUcin(150,(MediaQuery.of(context).size.width/2-20),1),
+                 createImage(150,(MediaQuery.of(context).size.width/2-20),1),
                  SizedBox(height: 10,),
-                 asakyText(20,150,"Wedding venue"),
+                 createText(20,150,"Wedding venue"),
                ],),
                 ],
               ),
@@ -46,16 +46,16 @@ class _WeddingState extends State<Wedding> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),2),
+                        createImage(150,(MediaQuery.of(context).size.width/2),2),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Wedding car"),
+                        createText(20,150,"Wedding car"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),4),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),4),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Wedding car"),
+                    createText(20,150,"Wedding car"),
                   ],),
                 ],
               ),
@@ -65,16 +65,16 @@ class _WeddingState extends State<Wedding> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),5),
+                        createImage(150,(MediaQuery.of(context).size.width/2),5),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Salon Services"),
+                        createText(20,150,"Salon Services"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),6),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),6),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Salon Services"),
+                    createText(20,150,"Salon Services"),
                   ],),
                 ],
               ),
@@ -84,16 +84,16 @@ class _WeddingState extends State<Wedding> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),7),
+                        createImage(150,(MediaQuery.of(context).size.width/2),7),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Wedding dresses"),
+                        createText(20,150,"Wedding dresses"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),8),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),8),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Wedding dresses"),
+                    createText(20,150,"Wedding dresses"),
                   ],),
                 ],
               ),
@@ -106,7 +106,7 @@ class _WeddingState extends State<Wedding> {
     );
   }
 
-  InkWell suratUcin(double h,double w,int i) {
+  InkWell createImage(double h,double w,int i) {
     return InkWell(
     onTap: (){
       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(child:Image.asset('lib/assets/wedding$i.webp'),)));
@@ -126,7 +126,7 @@ class _WeddingState extends State<Wedding> {
 
 
 
-  Container asakyText(double h,double w,String s) {
+  Container createText(double h,double w,String s) {
     return Container(height: h,
                         width: w,
                         decoration: BoxDecoration(

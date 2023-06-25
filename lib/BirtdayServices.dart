@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 
 
-class Birthday extends StatefulWidget {
-  const Birthday({Key? key}) : super(key: key);
+class BirthdayPage extends StatefulWidget {
+  const BirthdayPage({Key? key}) : super(key: key);
 
   @override
-  State<Birthday> createState() => _BirthdayState();
+  State<BirthdayPage> createState() => _BirthdayPageState();
 }
 
-class _BirthdayState extends State<Birthday> {
+class _BirthdayPageState extends State<BirthdayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,16 +25,16 @@ class _BirthdayState extends State<Birthday> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),1),
+                        createImage(150,(MediaQuery.of(context).size.width/2),1),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Birhday party"),
+                        createText(20,150,"Birhday party"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),2),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),2),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Birhday party"),
+                    createText(20,150,"Birhday party"),
                   ],),
                 ],
               ),
@@ -44,16 +44,16 @@ class _BirthdayState extends State<Birthday> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),5),
+                        createImage(150,(MediaQuery.of(context).size.width/2),5),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Birhday car"),
+                        createText(20,150,"Birhday car"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),6),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),6),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Car decoration"),
+                    createText(20,150,"Car decoration"),
                   ],),
                 ],
               ),
@@ -63,16 +63,16 @@ class _BirthdayState extends State<Birthday> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),7),
+                        createImage(150,(MediaQuery.of(context).size.width/2),7),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Birthday cake"),
+                        createText(20,150,"Birthday cake"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),8),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),8),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Birtday cake"),
+                    createText(20,150,"Birtday cake"),
                   ],),
                 ],
               ),
@@ -82,16 +82,16 @@ class _BirthdayState extends State<Birthday> {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),3),
+                        createImage(150,(MediaQuery.of(context).size.width/2),3),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Decorations"),
+                        createText(20,150,"Decorations"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),9),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),9),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Services"),
+                    createText(20,150,"Services"),
                   ],),
                 ],
               ),
@@ -103,7 +103,7 @@ class _BirthdayState extends State<Birthday> {
     );
   }
 
-  Container asakyText(double h,double w,String s) {
+  Container createText(double h,double w,String s) {
     return Container(height: h,
       width: w,
       decoration: BoxDecoration(
@@ -118,7 +118,7 @@ class _BirthdayState extends State<Birthday> {
     );
   }
 
-  InkWell suratUcin(double h,double w,int i) {
+  InkWell createImage(double h,double w,int i) {
     return InkWell(
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(child:Image.asset('lib/assets/birthday$i.webp'),)));

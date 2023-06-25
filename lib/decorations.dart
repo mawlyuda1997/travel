@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 
-class Decor extends StatefulWidget {
-  const Decor({Key? key}) : super(key: key);
+class DecorPage extends StatefulWidget {
+  const DecorPage({Key? key}) : super(key: key);
 
   @override
-  State<Decor > createState() => _DecorState();
+  State<DecorPage > createState() => _DecorPageState();
 }
 
-class _DecorState extends State<Decor > {
+class _DecorPageState extends State<DecorPage > {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,16 +24,16 @@ class _DecorState extends State<Decor > {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),3),
+                        createImage(150,(MediaQuery.of(context).size.width/2),3),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Decoration"),
+                        createText(20,150,"Decoration"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),1),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),1),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Decoration"),
+                    createText(20,150,"Decoration"),
                   ],),
                 ],
               ),
@@ -43,16 +43,16 @@ class _DecorState extends State<Decor > {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),2),
+                        createImage(150,(MediaQuery.of(context).size.width/2),2),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Decoration"),
+                        createText(20,150,"Decoration"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),4),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),4),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Decoration"),
+                    createText(20,150,"Decoration"),
                   ],),
                 ],
               ),
@@ -62,16 +62,16 @@ class _DecorState extends State<Decor > {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),5),
+                        createImage(150,(MediaQuery.of(context).size.width/2),5),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Decoration"),
+                        createText(20,150,"Decoration"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),6),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),6),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Decoration"),
+                    createText(20,150,"Decoration"),
                   ],),
                 ],
               ),
@@ -81,16 +81,16 @@ class _DecorState extends State<Decor > {
                     padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        suratUcin(150,(MediaQuery.of(context).size.width/2),7),
+                        createImage(150,(MediaQuery.of(context).size.width/2),7),
                         SizedBox(height: 10,),
-                        asakyText(20,150,"Decoration"),
+                        createText(20,150,"Decoration"),
                       ],
                     ),
                   ),
                   Column(children: [
-                    suratUcin(150,(MediaQuery.of(context).size.width/2-20),8),
+                    createImage(150,(MediaQuery.of(context).size.width/2-20),8),
                     SizedBox(height: 10,),
-                    asakyText(20,150,"Decoration"),
+                    createText(20,150,"Decoration"),
                   ],),
                 ],
               ),
@@ -102,7 +102,7 @@ class _DecorState extends State<Decor > {
     );
   }
 
-  Container asakyText(double h,double w,String s) {
+  Container createText(double h,double w,String s) {
     return Container(height: h,
       width: w,
       decoration: BoxDecoration(
@@ -117,7 +117,7 @@ class _DecorState extends State<Decor > {
     );
   }
 
-  InkWell suratUcin(double h,double w,int i) {
+  InkWell createImage(double h,double w,int i) {
     return InkWell(
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(child:Image.asset('lib/assets/decor$i.webp'),)));

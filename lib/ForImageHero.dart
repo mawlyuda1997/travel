@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:untitled4/Bash sahypa.dart';
-import 'Girish.dart';
-class Details extends StatefulWidget {
+
+class DetailPage extends StatefulWidget {
   var imgPath;
-  Details({this.imgPath});
+  DetailPage({this.imgPath});
 
 
 
 
   @override
-  State<Details> createState() => _DetailsState();
+  State<DetailPage> createState() => _DetailPageState();
 
 
 }
 
-class _DetailsState extends State<Details> {
+class _DetailPageState extends State<DetailPage> {
 
 
 
