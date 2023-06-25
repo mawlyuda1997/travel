@@ -97,8 +97,12 @@ class _BirthdayPageState extends State<BirthdayPage> {
                     ],),
                   ],
                 ),
-                ElevatedButton(onPressed: (){ i++;
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(width: 300,height: 300,color: i%2==0?Colors.deepOrangeAccent: Colors.green,)));}, child: Icon(Icons.add),),
+                ElevatedButton(onPressed: (){
+                  setState(() {
+                    i++;
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(width: 300,height: 300,color: i%2==0?Colors.deepOrangeAccent: Colors.green,)));
+                  });
+}, child: Icon(Icons.add),),
               ],
             ),
           ],

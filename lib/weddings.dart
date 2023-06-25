@@ -111,8 +111,11 @@ class _WeddingPageState extends State<WeddingPage> {
   }
 
   ElevatedButton buildElevatedButton(BuildContext context) {
-    return ElevatedButton(onPressed: (){ i++;
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(width: 300,height: 300,color: i%2==0?Colors.cyan: Colors.indigo,)));}, child: Icon(Icons.add),);
+    return ElevatedButton(onPressed: (){setState(() {
+      i++;
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Container(width: 300,height: 300,color: i%2==0?Colors.cyan: Colors.indigo,)));
+    });
+ }, child: Icon(Icons.add),);
   }
 
   InkWell createImage(double h,double w,int i) {
